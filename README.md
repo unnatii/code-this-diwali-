@@ -3,5 +3,11 @@ This diwali i learn to create JavaScript powered projects that will enhance and 
 
 
 Image Slider : dual image reveal control interface
+
+
+
 Calci : a simple calculator
+
+
+
 tipCalci: used for finding percent of any number
