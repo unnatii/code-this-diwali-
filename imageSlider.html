@@ -1,0 +1,77 @@
+<!doctype>
+<html>
+<head>
+<title>Image Slider</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+h1{
+padding:50px 0px 0px 300px;
+color:white;}
+
+.box {
+float:left;
+width:300px;
+height:350px;
+padding:50px;
+margin:50px 50px 50px 50px;
+border:white 10px solid;}
+
+.box > img{
+width:300px;
+height:350px;
+position:absolute;
+border:white 10px solid;
+}
+
+.box > .img2{
+clip:rect(0px,160px,350px,0px);
+}
+
+.box > .arrow{
+margin:10px 0 0;
+position:absolute;
+height:350;
+width:300px;
+cursor:e-resize;
+opacity:0.5;
+}
+</style>
+<script>
+function slide(event){
+    event.target.previousElementSibling.style.clip = "rect(0px, "+(event.clientX-event.target.offsetLeft)+"px, 350px, 0px)";  
+}
+</script>
+
+</head>
+<body style="background-color:#34495e;">
+
+<h1>Images before and after photoshop</h1><div style="padding:10px 0px 0px 500px;color:white">Move the cursor over the images</div>
+
+<div class="box">
+<img src="p1.jpg" >
+<img class="img2" src="p2.jpg">
+<div class="arrow" onmousemove="slide(event)"></div>
+</div>
+
+
+
+<div class="box">
+<img src="p3.jpg" >
+<img class="img2" src="p4.jpg">
+<div class="arrow" onmousemove="slide(event)"></div>
+</div>
+
+
+<div class="box">
+<img src="p5.jpg" >
+<img class="img2" src="p6.jpg">
+<div class="arrow" onmousemove="slide(event)"></div>
+</div>
+
+</body>
+</html>
