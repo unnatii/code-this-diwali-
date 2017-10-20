@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Percent Calculator</title>
+<script>
+function calculate(slider){
+var percent=document.getElementById('percent');
+var inp=document.getElementById('inp').value;
+var slideval=document.getElementById('slideval');
+var prcnt=slider* 0.01;
+percent.innerHTML=(inp*prcnt).toFixed(2);
+slideval.innerHTML=slider+"%";
+}
+
+function clear(){
+document.getElementById('inp').value=0;
+}
+</script>
+</head>
+
+<body onload="clear()">
+<h1>
+Percent Calculation
+</h1>
+<h2>Enter number whose percent is to be calculated</h2>
+<input type="text" id="inp" ><br>
+<input type="range" min="0" max="100" value="0" step="1" onchange="calculate(this.value)" style="width:400px;">
+<span id="slideval">0%</span><br>
+percent value<span id="percent"></span>
+</body>
+
+</html>
